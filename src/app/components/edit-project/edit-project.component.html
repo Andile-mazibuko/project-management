@@ -1,0 +1,37 @@
+<form [formGroup]="editProjectForm" action="">
+    <mat-form-field>
+        <mat-label>name</mat-label>
+        <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Priority</mat-label>
+        <mat-select formControlName="priority">
+            <mat-option value="High">High</mat-option>
+            <mat-option value="Medium">Medium</mat-option>
+            <mat-option value="Low">Low</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Managers</mat-label>
+        <mat-select formControlName="manager">
+            <mat-option *ngFor="let manager of managers" [value]="manager.email">{{ manager.email }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Deadline</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker">
+
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    <div class="btn-cont">
+        <button type="button" class="cancel" (click)="cancel()">Cancel</button>
+        <button type="button" class="edit" (click)="edit()">Edit</button>
+    </div>
+</form>

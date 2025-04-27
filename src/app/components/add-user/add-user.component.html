@@ -1,0 +1,22 @@
+<form  [formGroup]="managerForm" action="" (ngSubmit)="addUser()">
+    <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput name="first_name" formControlName="first_name" type="text" required="">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" name="last_name" formControlName="last_name" required="">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>email</mat-label>
+        <input matInput type="text" name="email" formControlName="email" required="">
+    </mat-form-field>
+    <div class="btn-cont no-btn">
+        <button type="button" (click)="noThanks()">No thanks</button>
+    </div>
+    <div class="btn-cont add-btn">
+        <button type="submit">Add</button>
+    </div>
+    
+    
+</form>

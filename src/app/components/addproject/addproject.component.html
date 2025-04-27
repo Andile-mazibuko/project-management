@@ -1,0 +1,39 @@
+<form action="" (ngSubmit)="addProject()">
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Project Name</mat-label>
+      <input matInput name="name" [(ngModel)]="project.name">
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+        <mat-label>Project Manager</mat-label>
+        <mat-select name="manager" [(ngModel)]="project.manager">
+            <mat-option *ngFor="let manager of managers" [value]="manager.email">{{ manager.first_name+" "+ manager.last_name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+        <mat-label>Priority</mat-label>
+        <mat-select name="priority" [(ngModel)]="project.priority">
+            <mat-option value="High">High</mat-option>
+            <mat-option value="Medium">Medium</mat-option>
+            <mat-option value="Low">Low</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+        <mat-label>Project deadline</mat-label>
+        <input matInput [matDatepicker]="picker" name="deadline" [(ngModel)]="project.deadline">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        
+        <mat-datepicker-toggle matIconSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>arrow_drop_down</mat-icon>
+        </mat-datepicker-toggle>
+        
+        <mat-datepicker #picker></mat-datepicker>
+    
+    </mat-form-field>
+     <div class="submit-container">
+        <button type="submit">Add</button>
+     </div>
+</form>

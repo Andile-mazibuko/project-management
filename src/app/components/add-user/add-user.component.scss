@@ -1,0 +1,33 @@
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+mat-form-field{
+    width: 90%;
+}
+.btn-cont {
+    width: 50%;
+    display: flex;    
+}
+.btn-cont button{
+    border: none;
+    background: transparent;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btn-cont button:hover{
+    background-color: rgb(188, 188, 188);
+    box-shadow: rgba(192, 192, 192, 0.25) 0px 50px 100px -20px, rgba(202, 202, 202, 0.3) 0px 30px 60px -30px, rgba(163, 209, 255, 0.35) 0px -2px 6px 0px inset;
+}
+.no-btn{
+    justify-content: end;
+}
+.add-btn{
+    justify-content: start;
+}

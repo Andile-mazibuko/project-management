@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+}
+.warning-cont{
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+mat-icon{
+    height: 100px;
+    font-size:100px;
+    color: orange;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-cont{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+
+}
+.btn-cont button{
+    width: 80px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.no{
+    background-color: palevioletred;
+}
+.yes{
+    background-color: green;
+}

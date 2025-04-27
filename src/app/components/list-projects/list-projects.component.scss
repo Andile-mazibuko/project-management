@@ -1,0 +1,44 @@
+
+  .priority-container{
+    color:white;
+    width: 70%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .high-priority{
+    background: red;
+  }
+  .medium-priority{
+    background-color: orange;
+  }
+  .low-priority{
+    background-color: green;
+
+  }
+  .table-wrapper{
+    max-height: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  td{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .table-wrapper::-webkit-scrollbar{
+    display: none;
+  }
+ 
+  .action-container button{
+    border: none;
+    color: white;
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 1%;
+  }
+  .edit{
+    background-color: green;
+  }
+  .delete{
+    background-color: red;
+  }
