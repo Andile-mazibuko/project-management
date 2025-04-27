@@ -9,7 +9,7 @@
       
       <mat-divider></mat-divider>
       
-      <mat-list-item>Item 2</mat-list-item>
+      <mat-list-item><button type="button" (click)="getSummary()"> Manager summary</button></mat-list-item>
       
       <mat-divider></mat-divider>
       
@@ -40,8 +40,16 @@
       <button (click)="openDialog()"> <mat-icon>add</mat-icon> </button>
     </div>
     <div class="manager-tbl-cont">
-      <app-list-users></app-list-users>
+      <div class="users-tbl">
+        <app-list-users></app-list-users>
+      </div>
+      
+      <div class="proj-sum">
+        <app-summary></app-summary>
+      </div>
     </div>
+    
+   
 </mat-drawer-container>
 
 <router-outlet />

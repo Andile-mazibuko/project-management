@@ -1,14 +1,17 @@
 export interface Project {
-    id?:string,
-    name: string,
-    deadline: string,
-    manager?: string,
-    priority: "High" | "Medium" | "Low"
+  id?: string;
+  name: string;
+  deadline: string;
+  manager?: string;
+  priority: 'High' | 'Medium' | 'Low';
 }
-export interface User{
-    id?: string,
-    first_name: string,
-    last_name: string,
-    email: string
-
+export interface User {
+  id?: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+}
+export interface ManagerSummary {
+  email: string;
+  totalProjects: number;
 }

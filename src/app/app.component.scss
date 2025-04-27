@@ -38,9 +38,13 @@
 }
 .manager-tbl-cont{
     width: 80%;
-    margin-left: 10%;
+    margin-left: 1%;
     position: relative;
-    background-color: red;   
+    display: flex;
+    flex-wrap: nowrap;
+}
+.manager-tbl-cont .users-tbl{
+    width: 70%;
 }
 .add-manager-btn{
     width: 80%;
@@ -63,4 +67,8 @@
 }
 .manager-tbl-cont{
     margin-bottom: 10%;
+}
+.proj-sum{
+    margin: 1%;
+    width: 25%;
 }

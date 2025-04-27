@@ -29,4 +29,5 @@ export class ProjectService {
     let col = doc(this.fireStore,`${this.COLLECTION_NAME}/${project.id}`)
     deleteDoc(col)
   }
+  
 }
