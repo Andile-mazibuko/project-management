@@ -27,9 +27,10 @@ export class SummaryComponent {
       this.managers = resp;
       this.renderChart();
     });
+
     this.projServ.getProjects().subscribe((resp: Project[]) => {
       this.projects = resp;
-      console.log("KANE PROJS",this.countProjPerManager("hk@baryen.co.gr"))
+
       for (let i = 0; i < resp.length; i++) {
         const proj = resp[i];
         let managerFound = false;
@@ -40,10 +41,8 @@ export class SummaryComponent {
 
           if (projSum.email === proj.manager) {
             managerFound = true;
-            
+
             break;
-          } else {
-           // countProjects = 
           }
         }
 
@@ -52,10 +51,14 @@ export class SummaryComponent {
             email: proj.manager!,
             totalProjects: countProjects,
           });
-        }else{
-          const index = this.projectSummary.findIndex(p => p.email === proj.manager)
+        } else {
+          const index = this.projectSummary.findIndex(
+            (p) => p.email === proj.manager
+          );
           if (index !== -1) {
-            this.projectSummary[index].totalProjects = this.countProjPerManager(proj.manager!)
+            this.projectSummary[index].totalProjects = this.countProjPerManager(
+              proj.manager!
+            );
           }
         }
       }
@@ -74,9 +77,9 @@ export class SummaryComponent {
   }
 
   renderChart() {
-    const labels = this.projectSummary.map(sum => sum.email.split('@')[0]);
-    console.log('LABELS', labels);
-    const values = this.projectSummary.map(sum => sum.totalProjects);
+    const labels = this.projectSummary.map((sum) => sum.email.split('@')[0]);
+
+    const values = this.projectSummary.map((sum) => sum.totalProjects);
     new Chart('myChart', {
       type: 'bar',
       data: {

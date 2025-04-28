@@ -1,0 +1,54 @@
+
+<mat-drawer-container class="drawer-container">
+  
+    <mat-drawer #drawer class="drawer" mode="side">
+      <mat-list>
+        <mat-list-item class="logo">
+          <img src="favicon.ico" alt=""> 
+        </mat-list-item>
+        
+        <mat-divider></mat-divider>
+        
+        <mat-list-item><button type="button" (click)="getSummary()"> Manager summary</button></mat-list-item>
+        
+        <mat-divider></mat-divider>
+        
+        <mat-list-item>Item 3</mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    
+      <div class="menu-btn">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          <mat-icon>
+            menu
+          </mat-icon> 
+        </button>
+      </div>
+      <div class="projects">
+        <mat-tab-group animationDuration="2000ms">
+          <mat-tab label="Projects">
+            <app-list-projects></app-list-projects>
+             
+          </mat-tab>
+          <mat-tab label="Add project">
+            <app-addproject></app-addproject>
+         </mat-tab>
+        </mat-tab-group>
+      </div>
+      <h2 class="managers-title">Managers</h2>
+      <div class="add-manager-btn">
+        <button (click)="openDialog()"> <mat-icon>add</mat-icon> </button>
+      </div>
+      <div class="manager-tbl-cont">
+        <div class="users-tbl">
+          <app-list-users></app-list-users>
+        </div>
+        
+        <div class="proj-sum">
+          <app-summary></app-summary>
+        </div>
+      </div>
+      
+     
+  </mat-drawer-container>
+  
