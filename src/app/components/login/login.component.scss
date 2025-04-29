@@ -1,0 +1,50 @@
+.container {
+  height: 80%;
+  margin: auto;
+  margin-top: 5%;
+  width: 80%;
+  box-shadow: -5px -5px 10px 0px rgba(126, 126, 126, 0.5),
+    5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  overflow: hidden;
+  border-radius: 50px 10px;
+}
+.design {
+  background-color: green;
+}
+.conts {
+  width: 50%;
+  height: 100%;
+}
+.form-container form {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+}
+h2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.form-container form mat-form-field {
+  width: 80%;
+  height: 80px;
+  margin-left: 10%;
+}
+.log-btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.log-btn button{
+  margin-top: 5%;
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(51, 123, 255,0.9);
+  color: #ffff;
+  cursor: pointer;
+}

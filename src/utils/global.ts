@@ -1,5 +1,5 @@
 export const globalVar = {
-    guardPath : true,
+    grantAccess : true,
     firebaseConfig :{
         apiKey: "AIzaSyB1Uqd4lM2F5NeB2sOX2C7AJ5zexQk6rqI",
         authDomain: "note-taking-app-22ca0.firebaseapp.com",
@@ -8,4 +8,5 @@ export const globalVar = {
         messagingSenderId: "134976331190",
         appId: "1:134976331190:web:feb0bdd1564144b403f517"
       }
+    
 } 

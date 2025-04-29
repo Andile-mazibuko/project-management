@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="container">
+  <div class="conts design"></div>
+
+  <div class="conts form-container">
+    <h2>Log in Form</h2>
+    <form [formGroup]="loginForm" action="" (ngSubmit)="login()">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <mat-icon matPrefix>person</mat-icon>
+        <input matInput type="email" formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>password</mat-label>
+        <mat-icon matPrefix>lock</mat-icon>
+        <input matInput type="password" formControlName="password" />
+      </mat-form-field>
+
+      <div class="log-btn">
+        <a href="">Fogort password?</a>
+      </div>
+
+      <div class="log-btn">
+        <button matButton type="submit">Log in</button>
+      </div>
+    </form>
+  </div>
+</div>

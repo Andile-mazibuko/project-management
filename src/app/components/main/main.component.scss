@@ -1,74 +1,73 @@
-.drawer-container{
-    height: 100%;
-    width: 100%;
+.drawer-container {
+  height: 100%;
+  width: 100%;
 }
 
-.drawer{
-    width: 250px;
-    height: 100%;
+.drawer {
+  width: 250px;
+  height: 100%;
 }
-.drawer button{
-    display: flex;
-    float: right;
+.drawer button {
+  display: flex;
+  float: right;
 }
-.menu-btn{
-    margin-left: .5%;
-    margin-top: .5%;
+.menu-btn {
+  margin-left: 0.5%;
+  margin-top: 0.5%;
 }
-.menu-btn button{
-    border: 0;
+.menu-btn button {
+  border: 0;
 }
-.projects{
-    margin: .5%;
-    
+.projects {
+  margin: 0.5%;
 }
-.add-project form{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0000 ;
+.add-project form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0000;
 }
-.managers-title{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    color: grey;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.managers-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: grey;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.manager-tbl-cont{
-    width: 80%;
-    margin-left: 1%;
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
+.manager-tbl-cont {
+  width: 80%;
+  margin-left: 1%;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
 }
-.manager-tbl-cont .users-tbl{
-    width: 70%;
+.manager-tbl-cont .users-tbl {
+  width: 70%;
 }
-.add-manager-btn{
-    width: 80%;
-    margin-left: 10%;
-    display: flex;
-    justify-content: end;
-    margin-bottom: 0.5%;
+.add-manager-btn {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 0.5%;
 }
-.add-manager-btn button{
-    width: 100px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 15px;
-    background-color: rgb(255, 77, 136);
-    border: none;
-    cursor: pointer;    
+.add-manager-btn button {
+  width: 100px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 15px;
+  background-color: rgb(255, 77, 136);
+  border: none;
+  cursor: pointer;
 }
-.manager-tbl-cont{
-    margin-bottom: 10%;
+.manager-tbl-cont {
+  margin-bottom: 10%;
 }
-.proj-sum{
-    margin: 1%;
-    width: 25%;
+.proj-sum {
+  margin: 1%;
+  width: 25%;
 }

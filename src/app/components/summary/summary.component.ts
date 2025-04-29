@@ -81,13 +81,14 @@ export class SummaryComponent {
 
     const values = this.projectSummary.map((sum) => sum.totalProjects);
     new Chart('myChart', {
-      type: 'bar',
+      type: 'doughnut',
       data: {
         labels: labels,
         datasets: [
           {
             label: 'No of projects assigned per Manager',
             data: values,
+            backgroundColor:['#008080','#6A5ACD','#2E8B57','#4682B4']
           },
         ],
       },
@@ -96,7 +97,7 @@ export class SummaryComponent {
         plugins: {
           legend: {
             display: true,
-            position: 'bottom',
+            position: 'right',
           },
         },
       },
