@@ -37,11 +37,12 @@ export class AddprojectComponent implements OnInit {
   };
   managers: User[] = [];
 
-  constructor(private projServ: ProjectService, private userServ: UserService) {
-    
-  }
+  constructor(
+    private projServ: ProjectService,
+    private userServ: UserService
+  ) {}
   ngOnInit(): void {
-    this.userServ.getManagers().subscribe((managers: User[]) => {
+    this.userServ.getUsers().subscribe((managers: User[]) => {
       this.managers = managers;
     });
   }

@@ -1,0 +1,29 @@
+.form-container{
+    width: 100%;//500px
+    margin: auto;
+    margin-top: 5%;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+mat-form-field{
+    width: 80%;
+    margin-left: 10%;
+}
+.btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}

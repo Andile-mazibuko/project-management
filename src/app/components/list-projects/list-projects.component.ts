@@ -56,7 +56,7 @@ export class ListProjectsComponent {
       this.custom_data = data;
       this.dataSource = new MatTableDataSource(this.custom_data);
     });
-    this.userServ.getManagers().subscribe((managers: User[]) => {
+    this.userServ.getUsers().subscribe((managers: User[]) => {
       this.managers = managers;
     });
   }

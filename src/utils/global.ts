@@ -1,5 +1,5 @@
 export const globalVar = {
-    grantAccess : true,
+    grantAccess : false,
     firebaseConfig :{
         apiKey: "AIzaSyB1Uqd4lM2F5NeB2sOX2C7AJ5zexQk6rqI",
         authDomain: "note-taking-app-22ca0.firebaseapp.com",

@@ -48,3 +48,18 @@ h2{
   color: #ffff;
   cursor: pointer;
 }
+.sign-up{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.sign-up button{
+  background-color: transparent;
+  color: purple;
+  font-weight: bolder;
+  font-size: larger;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}

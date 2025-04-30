@@ -42,7 +42,7 @@ export class AddUserComponent implements OnInit {
       email: ['', Validators.required],
     });
 
-    this.userServ.getManagers().subscribe((users: User[]) => {
+    this.userServ.getUsers().subscribe((users: User[]) => {
       this.users = users;
       console.log(users);
     });

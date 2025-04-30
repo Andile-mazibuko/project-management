@@ -23,7 +23,7 @@ export class SummaryComponent {
   ) {}
 
   ngOnInit(): void {
-    this.userServ.getManagers().subscribe((resp: User[]) => {
+    this.userServ.getUsers().subscribe((resp: User[]) => {
       this.managers = resp;
       this.renderChart();
     });

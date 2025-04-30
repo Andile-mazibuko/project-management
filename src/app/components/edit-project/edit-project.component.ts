@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,7 +16,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
   templateUrl: './edit-project.component.html',
   styleUrl: './edit-project.component.scss'
 })
-export class EditProjectComponent {
+export class EditProjectComponent implements OnInit{
   
   editProjectForm!: FormGroup;
   project!:Project;
@@ -24,18 +24,19 @@ export class EditProjectComponent {
 
   constructor(private fb: FormBuilder,private userServ:UserService,private dialog: MatDialogRef<EditProjectComponent>,
     @Inject(MAT_DIALOG_DATA) private data:Project){
-      
-      this.userServ.getManagers().subscribe((managers:User[])=>{
-        this.managers = managers
-      })
-      
-      this.editProjectForm = this.fb.group({
-        name: [this.data.name,Validators.required],
-        priority:[this.data.priority,Validators.required],
-        manager:[this.data.manager,Validators.required],
-        deadline:[this.data.deadline,Validators.required]        
-      })
     }
+  ngOnInit(): void {
+    this.userServ.getUsers().subscribe((managers:User[])=>{
+      this.managers = managers
+    })
+    
+    this.editProjectForm = this.fb.group({
+      name: [this.data.name,Validators.required],
+      priority:[this.data.priority,Validators.required],
+      manager:[this.data.manager,Validators.required],
+      deadline:[this.data.deadline,Validators.required]        
+    })
+  }
     cancel(){
       this.dialog.close()
     }

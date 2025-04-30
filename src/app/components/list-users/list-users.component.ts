@@ -24,7 +24,7 @@ export class ListUsersComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.managersSub = this.userServ.getManagers().subscribe((managers: User[]) => {
+    this.managersSub = this.userServ.getUsers().subscribe((managers: User[]) => {
       this.managers = managers
       this.dataSource = new MatTableDataSource(managers)
     })
