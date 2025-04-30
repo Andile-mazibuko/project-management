@@ -87,7 +87,11 @@ export class ListProjectsComponent {
    * @param project Project to be edited
    */
   editProject(project: Project): void {
-    this.dialog.open(EditProjectComponent, { width: '500px', data: project });
+    const dialogRef = this.dialog.open(EditProjectComponent, { width: '500px', data: project });
+
+    dialogRef.afterClosed().subscribe(result =>{
+      
+    })
   }
   deleteProject(project: Project) {
     this.dialog.open(ConfirmationComponent, { width: '500px', data: project });

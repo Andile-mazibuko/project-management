@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { User } from '../../interfaces/project';
 import { UserService } from '../../services/user.service';
- 
+
 @Component({
   selector: 'app-list-users',
   standalone: true,
@@ -10,20 +10,30 @@ import { UserService } from '../../services/user.service';
   templateUrl: './list-users.component.html',
   styleUrl: './list-users.component.scss'
 })
-export class ListUsersComponent {
-  display_columns = ["id","First Name","Last Name","Email"]
+export class ListUsersComponent implements OnInit, OnDestroy {
+  display_columns = ["id", "First Name", "Last Name", "Email"]
   dataSource!: MatTableDataSource<User>
-  managers: User[]= []
+  managers: User[] = []
 
-  constructor(private userServ: UserService){
-    this.userServ.getManagers().subscribe((managers:User[])=>{
+  managersSub: any;
+
+  constructor(private userServ: UserService) {
+
+
+
+  }
+
+  ngOnInit(): void {
+    this.managersSub = this.userServ.getManagers().subscribe((managers: User[]) => {
       this.managers = managers
       this.dataSource = new MatTableDataSource(managers)
     })
   }
 
-  
+  ngOnDestroy(): void {
 
+    this.managersSub.unsubscribe();
+  }
 
 
 }

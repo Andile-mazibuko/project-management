@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgModel } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -28,7 +28,7 @@ import { NgFor } from '@angular/common';
   templateUrl: './addproject.component.html',
   styleUrl: './addproject.component.scss',
 })
-export class AddprojectComponent {
+export class AddprojectComponent implements OnInit {
   project: any = {
     name: '',
     deadline: new Date(),
@@ -38,6 +38,9 @@ export class AddprojectComponent {
   managers: User[] = [];
 
   constructor(private projServ: ProjectService, private userServ: UserService) {
+    
+  }
+  ngOnInit(): void {
     this.userServ.getManagers().subscribe((managers: User[]) => {
       this.managers = managers;
     });

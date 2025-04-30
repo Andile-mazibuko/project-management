@@ -1,4 +1,4 @@
-import { Component, Inject, inject } from '@angular/core';
+import { Component, Inject, inject, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -25,14 +25,17 @@ import { ReactiveFormsModule } from '@angular/forms';
   templateUrl: './add-user.component.html',
   styleUrl: './add-user.component.scss',
 })
-export class AddUserComponent {
+export class AddUserComponent implements OnInit {
   users: User[] = [];
-  managerForm: FormGroup;
+  managerForm!: FormGroup;
+
   constructor(
     private dialog: MatDialogRef<AddUserComponent>,
     private userServ: UserService,
     private fb: FormBuilder
-  ) {
+  ) {}
+
+  ngOnInit(): void {
     this.managerForm = this.fb.group({
       first_name: ['', Validators.required],
       last_name: ['', Validators.required],
