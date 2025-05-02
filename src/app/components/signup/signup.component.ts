@@ -14,6 +14,7 @@ import { UserService } from '../../services/user.service';
 import { User } from '../../interfaces/project';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
+
 @Component({
   selector: 'app-signup',
   standalone: true,
@@ -55,7 +56,7 @@ export class SignupComponent implements OnInit {
           first_name: formValue.first_name,
           last_name: formValue.last_name,
           email: formValue.email,
-          password: formValue.password,
+          password:formValue.password,
         };
         this.userServ.createManager(user);
 
@@ -66,4 +67,5 @@ export class SignupComponent implements OnInit {
       alert('Fill in the required details');
     }
   }
+  
 }

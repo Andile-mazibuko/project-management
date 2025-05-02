@@ -41,15 +41,18 @@ export class SummaryComponent {
 
           if (projSum.email === proj.manager) {
             managerFound = true;
-
+            
             break;
+          }else{
+            managerFound = false
+
           }
         }
 
         if (!managerFound) {
           this.projectSummary.push({
             email: proj.manager!,
-            totalProjects: countProjects,
+            totalProjects: 1,
           });
         } else {
           const index = this.projectSummary.findIndex(
@@ -88,7 +91,7 @@ export class SummaryComponent {
           {
             label: 'No of projects assigned per Manager',
             data: values,
-            backgroundColor:['#008080','#6A5ACD','#2E8B57','#4682B4']
+            backgroundColor: ['#008080', '#6A5ACD', '#2E8B57', '#4682B4'],
           },
         ],
       },
